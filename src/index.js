@@ -19,12 +19,7 @@ function onSearch(evt) {
   if (!value) {
     return;
   }
-  fetchCountries(value)
-    .then(pickAction)
-    .catch(error => {
-      console.log(error);
-      Notify.failure('Qui timide rogat docet negare');
-    });
+  fetchCountries(value).then(pickAction);
 }
 
 function pickAction(responce) {
